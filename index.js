@@ -3,14 +3,14 @@ import { startStandaloneServer } from "@apollo/server/standalone";
 
 const typeDefs = `#graphql
   type Query {
-    hello: string;
+    hello: String
   }
-`;
+`
 
 const resolvers = {
   Query: {
     hello: () => {
-      return "Hello World!";
+      return "Hello World!"
     },
   },
 };
