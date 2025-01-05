@@ -10,7 +10,7 @@ const typeDefs = `#graphql
     book: Book!
     member: Member!
   }
-  
+
   type Book {
     id: ID!
     title: String!
@@ -57,6 +57,7 @@ const resolvers = {
     },
   },
   Book: {
+    
     lendings(parent) {
       return lendings.filter((lending) => {
         return lending.book_id === parent.id;
